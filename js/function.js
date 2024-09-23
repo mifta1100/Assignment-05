@@ -5,15 +5,14 @@ function handleDonation(donationInputId, totalDonateId, accountBalanceId, button
 
     const myDonationAmount = parseFloat(donationAmount);
 
-    
     if (isNaN(myDonationAmount)) {
         alert('Please enter a valid number!');
-        return;
+        return false; 
     }
 
     if (myDonationAmount <= 0) {
         alert('Please enter a positive donation amount!');
-        return;
+        return false;  
     }
 
     const totalDonateAmount = parseFloat(totalDonate);
@@ -24,11 +23,22 @@ function handleDonation(donationInputId, totalDonateId, accountBalanceId, button
 
     if (currentBalance < 0) {
         alert('Insufficient balance!');
-        return;
+        return false;  
     }
 
+    
     document.getElementById(totalDonateId).innerText = newBalance + ' BDT';
     document.getElementById(accountBalanceId).innerText = currentBalance + ' BDT';
+
+    
+    document.getElementById(donationInputId).value = '';
+
+    return true; 
 }
 
 
+function toggleModal() {
+    const modal = document.getElementById('donationModal');
+    modal.classList.toggle('hidden');
+    modal.classList.toggle('flex');
+}

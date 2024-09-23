@@ -1,28 +1,42 @@
 document.getElementById('button-card-1').addEventListener('click', function (event) {
     event.preventDefault();
-    handleDonation('amount-card-1', 'totalDonateAmount-card-1', 'my-account', 'button-card-1');
-
-    toggleModal();
+    if (handleDonation('amount-card-1', 'totalDonateAmount-card-1', 'my-account', 'button-card-1')) {
+        toggleModal();
+    }
 });
-
 
 document.getElementById('button-card-2').addEventListener('click', function (event) {
     event.preventDefault();
-    handleDonation('amount-card-2', 'totalDonateAmount-card-2', 'my-account', 'button-card-2');
-
-    toggleModal();
+    if (handleDonation('amount-card-2', 'totalDonateAmount-card-2', 'my-account', 'button-card-2')) {
+        toggleModal();
+    }
 });
-
 
 document.getElementById('button-card-3').addEventListener('click', function (event) {
     event.preventDefault();
-    handleDonation('amount-card-3', 'totalDonateAmount-card-3', 'my-account', 'button-card-3');
-
-    toggleModal();
+    if (handleDonation('amount-card-3', 'totalDonateAmount-card-3', 'my-account', 'button-card-3')) {
+        toggleModal();
+    }
 });
 
-function toggleModal() {
-    const modal = document.getElementById('donationModal');
-    modal.classList.toggle('hidden');
-    modal.classList.toggle('flex');
-}
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('blogButton').addEventListener('click', function() {
+        window.location.href = 'FAQ.html';
+    });
+});
+
+
+
+document.getElementById('historyButton').addEventListener('click', function() {
+    document.getElementById('donationSection').classList.add('hidden');
+    document.getElementById('historySection').classList.remove('hidden');
+});
+
+document.getElementById('donationButton').addEventListener('click', function() {
+    document.getElementById('historySection').classList.add('hidden');
+    document.getElementById('donationSection').classList.remove('hidden');
+});
+
+
+
+
