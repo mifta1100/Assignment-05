@@ -40,7 +40,7 @@
                 <div class="navbar-end">
                     <div class="flex items-start justify-center space-x-3">
                         <img src="images/coin.png" alt="">
-                        <h3 class="font-semibold text-xl">5500 BDT</h3>
+                        <h3 id="my-account" class="font-semibold text-xl">5500 BDT</h3>
                     </div>
                 </div>
             </div>
@@ -67,13 +67,14 @@
                     <div class="space-y-6 p-1">
                         <div class="flex items-center p-3 rounded-2xl bg-gray-200 space-x-2">
                             <img src="images/coin.png" alt="">
-                            <h3 class="font-semibold text-xl">0 BDT</h3>
+                            <h3 id="totalDonateAmount-card-1" class="font-semibold text-xl">0 BDT</h3>
                         </div>
                         <div class="space-y-2">
                             <h1 class="font-extrabold text-[20px] text-[#494949]">Donate for Flood at Noakhali,
                                 Bangladesh
                             </h1>
-                            <p class="text-[#737373] text-justify"> The recent floods in Noakhali have caused significant damage to
+                            <p class="text-[#737373] text-justify"> The recent floods in Noakhali have caused
+                                significant damage to
                                 <br>
                                 homes infrastructure. Your donation will help provide essential <br> supplies and to
                                 those
@@ -85,11 +86,12 @@
                             </p>
                         </div>
                         <div>
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input id="amount-card-1" type="text" placeholder="Write Donation Amount"
                                 class="input input-bordered w-full" />
                         </div>
                         <div>
-                            <button class="btn w-full bg-[#B4F461] font-bold text-[20px] text-black">Donate Now</button>
+                            <button id="button-card-1"
+                                class="btn w-full bg-[#B4F461] font-bold text-[20px] text-black">Donate Now</button>
                         </div>
                     </div>
                 </div>
@@ -103,21 +105,28 @@
                     <div class="space-y-6 p-1">
                         <div class="flex items-center p-3 rounded-2xl bg-gray-200 space-x-2">
                             <img src="images/coin.png" alt="">
-                            <h3 class="font-semibold text-xl">0 BDT</h3>
+                            <h3 id="totalDonateAmount-card-2" class="font-semibold text-xl">0 BDT</h3>
                         </div>
                         <div class="space-y-2">
                             <h1 class="font-extrabold text-[20px] text-[#494949]">Donate for Flood at Noakhali,
                                 Bangladesh
                             </h1>
-                            <p class="text-[#737373] text-justify">The recent floods in Feni have devastated local communities, leading <br> to  severe disruption and loss. Your generous donation will help <br> provide immediate aid, including food, clean water, and medical <br> supplies, to those affected by this calamity. Together, we can offer <br> crucial support and help rebuild lives in the aftermath of this disaster. <br> Every contribution counts towards making a real difference. Please <br> consider donating today to assist those in urgent need.
+                            <p class="text-[#737373] text-justify">The recent floods in Feni have devastated local
+                                communities, leading <br> to severe disruption and loss. Your generous donation will
+                                help <br> provide immediate aid, including food, clean water, and medical <br> supplies,
+                                to those affected by this calamity. Together, we can offer <br> crucial support and help
+                                rebuild lives in the aftermath of this disaster. <br> Every contribution counts towards
+                                making a real difference. Please <br> consider donating today to assist those in urgent
+                                need.
                             </p>
                         </div>
                         <div>
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input id="amount-card-2" type="text" placeholder="Write Donation Amount"
                                 class="input input-bordered w-full" />
                         </div>
                         <div>
-                            <button class="btn w-full bg-[#B4F461] font-bold text-[20px] text-black">Donate Now</button>
+                            <button id="button-card-2"
+                                class="btn w-full bg-[#B4F461] font-bold text-[20px] text-black">Donate Now</button>
                         </div>
                     </div>
                 </div>
@@ -131,12 +140,13 @@
                     <div class="space-y-6 p-1">
                         <div class="flex items-center p-3 rounded-2xl bg-gray-200 space-x-2">
                             <img src="images/coin.png" alt="">
-                            <h3 class="font-semibold text-xl">0 BDT</h3>
+                            <h3 id="totalDonateAmount-card-3" class="font-semibold text-xl">0 BDT</h3>
                         </div>
                         <div class="space-y-2">
                             <h1 class="font-extrabold text-[20px] text-[#494949]">Aid for Injured in the Quota Movement
                             </h1>
-                            <p class="text-[#737373] text-justify">The recent Quota movement has resulted in numerous injuries and
+                            <p class="text-[#737373] text-justify">The recent Quota movement has resulted in numerous
+                                injuries and
                                 <br> significant hardship for many individuals. Your support is crucial in <br>
                                 providing medical assistance, rehabilitation, and necessary supplies <br> to those
                                 affected. By contributing, you help ensure that injured <br> individuals receive the
@@ -146,15 +156,32 @@
                                 need.
                         </div>
                         <div>
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input id="amount-card-3" type="text" placeholder="Write Donation Amount"
                                 class="input input-bordered w-full" />
                         </div>
                         <div>
-                            <button class="btn w-full bg-[#B4F461] font-bold text-[20px] text-black">Donate Now</button>
+                            <button id="button-card-3"
+                                class="btn w-full bg-[#B4F461] font-bold text-[20px] text-black">Donate Now</button>
                         </div>
                     </div>
                 </div>
                 <!-- Card 03 End -->
+
+
+                <!-- Modal -->
+                <div id="donationModal"
+                    class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+                    <div class="relative p-5 bg-white border rounded-2xl max-w-sm mx-auto">
+                        <div class="flex flex-col justify-center items-center space-y-5">
+                            <h1 class="font-bold text-3xl">Congrats!</h1>
+                            <img src="images/coin.png" alt="Coin Icon">
+                            <h1 class="font-semibold text-xl text-gray-400">You Have Donated for Humankind</h1>
+                            <h1 class="font-bold text-[14px]">Successfully</h1>
+                            <button class="btn btn-wide font-semibold text-[16px]" onclick="toggleModal()">Close
+                                Confirmation</button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -163,6 +190,9 @@
     <footer>
 
     </footer>
+
+    <script src="js/function.js"></script>
+    <script src="js/calculate.js"></script>
 </body>
 
 </html>
