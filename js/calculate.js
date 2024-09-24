@@ -29,24 +29,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.getElementById('donationButton').addEventListener('click', function () {
-  
     this.style.backgroundColor = '#B4F461';
-
     document.getElementById('historyButton').style.backgroundColor = '';
 
+    // Hide history section and show donation section
     document.getElementById('historySection').classList.add('hidden');
     document.getElementById('donationSection').classList.remove('hidden');
 });
 
 document.getElementById('historyButton').addEventListener('click', function () {
-
     this.style.backgroundColor = '#B4F461';
-
     document.getElementById('donationButton').style.backgroundColor = '';
 
+    // Hide donation section and show history section
     document.getElementById('donationSection').classList.add('hidden');
     document.getElementById('historySection').classList.remove('hidden');
 });
+
 
 
 

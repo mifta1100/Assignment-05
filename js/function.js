@@ -41,26 +41,30 @@ function addToHistory(amount, causeName) {
     const historySection = document.getElementById('historySection');
 
     const currentDate = new Date();
-    const donationTime = currentDate.toString();
-
+    const donationTime = currentDate.toLocaleString();
 
     const historyEntry = document.createElement('div');
-    historyEntry.classList.add('border', 'w-1/2', 'text-center', 'rounded-2xl', 'p-5');
-
+    historyEntry.classList.add(
+        'border', 'w-full', 'md:w-1/2', 'text-center', 'rounded-2xl', 'p-5',
+        'bg-gray-100', 'shadow-md', 'mt-4'
+    );
 
     historyEntry.innerHTML = `
     <div class="flex flex-col justify-center items-center w-full text-center space-y-4">
-        <h1 class="font-bold text-xl">
+        <h1 class="font-bold text-lg md:text-xl">
             <span>${amount}</span> Taka is donated for <span>${causeName}</span>
         </h1>
-        <p class="font-semibold text-[16px] text-gray-500">
+        <p class="font-semibold text-sm md:text-base text-gray-500">
             Date: ${donationTime}
         </p>
     </div>
-`;
+    `;
 
+    // Append the history entry to the history section without showing it immediately
     historySection.appendChild(historyEntry);
 }
+
+
 
 
 function toggleModal() {

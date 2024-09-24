@@ -29,39 +29,56 @@
     </header>
 
     <main>
-        <div class="container mx-auto p-16 space-y-5">
-            <div class="mb-6">
-                <h1 class="font-extrabold text-4xl">Important FAQ</h1>
-            </div>
-            <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-2xl font-bold">What is Document Object Model (DOM)?</div>
-                <div class="collapse-content">
-                  <p class="font-medium text-[16px] text-gray-500">The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</p>
-                </div>
-              </div>
-              <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-2xl font-bold">How do you select an element from the DOM?</div>
-                <div class="collapse-content">
-                  <p class="font-medium text-[16px] text-gray-500">The getElementById() method of the Document interface returns an Element object representing the element whose id property matches the specified string.</p>
-                </div>
-              </div>
-              <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-2xl font-bold">What is event delegation in the context og the DOM, and why is it useful?</div>
-                <div class="collapse-content">
-                  <p class="font-medium text-[16px] text-gray-500">Event delegation uses one parent listener to handle events for its child elements efficiently.</p>
-                </div>
-              </div>
-              <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-2xl font-bold">How do you manipulate an element's attributes and styles using the DOM?</div>
-                <div class="collapse-content">
-                  <p class="font-medium text-[16px] text-gray-500">Use setAttribute() for attributes and element.style for styles.</p>
-                </div>
-              </div> 
+      <div class="container mx-auto px-4 py-8 sm:py-16 space-y-5">
+        <div class="mb-6">
+            <h1 class="font-extrabold text-3xl sm:text-4xl">Important FAQ</h1>
         </div>
+        
+        <!-- FAQ 1 -->
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl sm:text-2xl font-bold">What is Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p class="font-medium text-sm sm:text-[16px] text-gray-500">
+                    The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.
+                </p>
+            </div>
+        </div>
+    
+        <!-- FAQ 2 -->
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl sm:text-2xl font-bold">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p class="font-medium text-sm sm:text-[16px] text-gray-500">
+                    The getElementById() method of the Document interface returns an Element object representing the element whose id property matches the specified string.
+                </p>
+            </div>
+        </div>
+    
+        <!-- FAQ 3 -->
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl sm:text-2xl font-bold">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+                <p class="font-medium text-sm sm:text-[16px] text-gray-500">
+                    Event delegation uses one parent listener to handle events for its child elements efficiently.
+                </p>
+            </div>
+        </div>
+    
+        <!-- FAQ 4 -->
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl sm:text-2xl font-bold">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+                <p class="font-medium text-sm sm:text-[16px] text-gray-500">
+                    Use setAttribute() for attributes and element.style for styles.
+                </p>
+            </div>
+        </div>
+    </div>
+    
     </main>
 
     <footer>
